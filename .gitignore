@@ -1,0 +1,10 @@
+PIC10Blinky.X/build
+PIC10Blinky.X/dist
+PIC10Blinky.X/disassembly/
+PIC10Blinky.X/.generated_files
+PIC10Blinky.X/nbproject/Makefile-*
+PIC10Blinky.X/nbproject/Package-*
+PIC10Blinky.X/nbproject/private
+PIC10Blinky.X/debug
+PIC10Blinky.X/queuelogs
+
