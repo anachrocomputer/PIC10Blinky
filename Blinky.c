@@ -1,9 +1,5 @@
-/*
- * File:   Blinky.c
- * Author: john
- *
- * Created on April 28, 2026, 8:24 PM
- */
+/* Blinky --- blink LEDs on the PIC10F322 in SOT23-6 package 2026-04-28 */
+
 
 // PIC10F322 Configuration Bit Settings
 
@@ -29,7 +25,9 @@
 
 void main(void)
 {
-    volatile int dally;
+    volatile uint16_t dally;
+    
+    OSCCONbits.IRCF = 7;    // Select 16MHz internal oscillator
     
     TRISAbits.TRISA0 = 0;   // RA0 pin 1 to output
     TRISAbits.TRISA1 = 0;   // RA1 pin 3 to output
@@ -48,12 +46,12 @@ void main(void)
     {
         LATAbits.LATA0 = 1;
         
-        for (dally = 0; dally < 30000; dally++)
+        for (dally = 0; dally < 60000; dally++)
             ;
         
         LATAbits.LATA0 = 0;
         
-        for (dally = 0; dally < 30000; dally++)
+        for (dally = 0; dally < 60000; dally++)
             ;
     }
 }
