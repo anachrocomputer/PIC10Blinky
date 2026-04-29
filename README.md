@@ -3,8 +3,11 @@
 
 # PIC10Blinky #
 
-Blink an LED on the Microchip PIC10F322.
+Blink and fade LEDs on the Microchip PIC10F322.
 Specifically, the SOT23-6 version.
+
+LEDs on RA0/PWM1 and RA1/PWM2 fade alternately.
+LED on RA2 blinks.
 
 ## Pinout ##
 
@@ -12,8 +15,8 @@ Specifically, the SOT23-6 version.
 |-----|----------|-----------------------|
 | 1   | RA0      | LED via 330R resistor |
 | 2   | Vss      | GND                   |
-| 3   | RA1      |                       |
-| 4   | RA2      |                       |
+| 3   | RA1      | LED via 330R resistor |
+| 4   | RA2      | LED via 330R resistor |
 | 5   | Vdd      | +5V                   |
 | 6   | RA3/MCLR |                       |
 
